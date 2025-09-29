@@ -1,0 +1,107 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": {
+        "source": "$HOME/.config/fastfetch/logos/magical-anime-girl-with-staff-purple-sticker.png",
+        "height": 18,
+	    "padding" : {
+	        "top": 1
+	     }
+    },
+    "display": {
+        "separator": " ⚬ "
+    },
+    "modules": [
+        {
+            "type": "custom",
+            "format": "┌───────────────────────────────────────────────────┐"
+        },
+        {
+            "type": "os",
+            "key": "  󰣇 OS",
+            "keyColor": "blue"
+        },
+        {
+            "type": "kernel",
+            "key": "   Kernel",
+            "keyColor": "magenta"
+        },
+        {
+            "type": "packages",
+            "key": "  󰏗 Packages",
+            "keyColor": "blue"
+        },
+        {
+            "type": "de",
+            "key": "   DE",
+	        "format": "{2}",
+            "keyColor": "magenta"
+        },
+        {
+            "type": "terminal",
+            "key": "   Terminal",
+            "format": "{1}",
+            "keyColor": "blue"
+        },
+        {
+            "type": "terminalfont",
+            "key": "   Font",
+            "keyColor": "magenta"
+        },
+        {
+            "type": "shell",
+            "format": "{1} {4}",
+            "key": "   Shell",
+            "keyColor": "blue"
+        },
+        {
+            "type": "custom",
+            "format": "└────────────────────────────────────────────────────┘"
+        },
+            "break",
+        {
+            "type": "custom",
+            "format": "┌────────────────────────────────────────────────────┐"
+        },
+        {
+            "type": "board",
+            "key": "   Mainboard",
+            "keyColor": "magenta"
+        },
+        {
+            "type": "cpu",
+            "format": "{1}",
+            "key": "   CPU",
+            "keyColor": "blue"
+        },
+        {
+            "type": "gpu",
+            "key": "   GPU",
+            "keyColor": "magenta"
+        },
+        {
+            "type": "display",
+            "key": "  󰍹 Display",
+            "keyColor": "blue"
+        },
+        {
+            "type": "memory",
+            "key": "  󰘚 Memory",
+            "keyColor": "magenta"
+        },      
+        {
+            "type": "disk",
+            "key": "  🖴 Disk (/)",
+            "keyColor": "blue",
+        },
+        {
+            "type": "custom",
+            "format": "└────────────────────────────────────────────────────┘"
+        },
+        {
+            "type": "colors",
+            "paddingLeft": 2,
+            "symbol": "circle"
+        },
+            "break"
+    ]
+}

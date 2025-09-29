@@ -1,0 +1,4 @@
+{
+    "statusformatl": "$(filename) $(modified) $(status.paste)",
+    "statusformatr": "($(line),$(col)) | ft:$(opt:filetype) | $(opt:fileformat) | $(opt:encoding)"
+}

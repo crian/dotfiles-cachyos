@@ -1,0 +1,108 @@
+# ~/.config/starship.toml
+
+# Sets user-defined palette
+#palette = "catppuccin_macchiato"
+
+# Inserts a blank line between shell prompts
+add_newline = true
+
+# Change command timeout from 500 to 1000 ms
+command_timeout = 1000
+
+# Prompt format
+format = """
+[╭─](white)$os$username$hostname$directory$git_branch$git_status$cmd_duration
+[╰─](white)$shell$character"""
+
+# Prompt characters
+[character]
+success_symbol = "[❯](green)"
+error_symbol = "[❯](red)"
+
+# Shows current shell
+[shell]
+bash_indicator = ""
+fish_indicator = "󰈺"
+style = 'bold yellow'
+disabled = false
+
+# Shows icon based on the distribution or os
+[os]
+format ='[$symbol](bold blue)'
+disabled = false
+
+[os.symbols]
+Windows = "󰍲 "
+Ubuntu = "󰕈 "
+SUSE = " "
+Raspbian = "󰐿 "
+Mint = "󰣭 "
+Macos = " "
+Manjaro = " "
+Linux = "󰌽 "
+Gentoo = "󰣨 "
+Fedora = "󰣛 "
+Alpine = " "
+Amazon = " "
+Android = " "
+Arch = "󰣇 "
+CachyOS = "󰄛 "
+Artix = "󰣇 "
+CentOS = " "
+Debian = "󰣚 "
+Redhat = "󱄛 "
+RedHatEnterprise = "󱄛 "
+
+# Modules
+[username]
+style_user = "purple"
+style_root = "red"
+format = "[$user]($style) "
+disabled = false
+show_always = true
+
+[hostname]
+ssh_only = false
+format = "on [$hostname](yellow) "
+disabled = false
+
+[directory]
+truncation_length = 3
+truncation_symbol = "…/"
+home_symbol = "󰋞 ~"
+read_only_style = "red"
+read_only = "  "
+format = "at [$path]($style)[$read_only]($read_only_style) "
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = "󰝚 "
+"Pictures" = " "
+
+[cmd_duration]
+min_time = 1
+format = "took [󰔚 $duration](blue)"
+disabled = false
+
+[git_branch]
+symbol = "󰊢 "
+format = "on [$symbol$branch]($style) "
+truncation_length = 4
+truncation_symbol = "…/"
+style = "bold green"
+
+[git_status]
+format = '[\($all_status$ahead_behind\)]($style) '
+style = "bold green"
+conflicted = "🏳"
+up_to_date = " "
+untracked = " "
+ahead = "⇡${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+behind = "⇣${count}"
+stashed = "󰏗 "
+modified = " "
+staged = '[++\($count\)](green)'
+renamed = "󰖷 "
+deleted = " "
