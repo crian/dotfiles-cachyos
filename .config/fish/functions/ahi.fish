@@ -1,6 +1,6 @@
 function ahi
     # Define the AUR helper (e.g., paru, yay)
-    set AURHELPER yay
+    set AURHELPER paru
 
     # Retrieve available packages and display with fzf for selection
     set SELECTED_PKGS (eval $AURHELPER -Slq | fzf --header="Install packages" -m --preview="$AURHELPER -Si {}")

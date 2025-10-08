@@ -1,6 +1,6 @@
 function ahr
     # Define the AUR helper (e.g., paru, yay)
-    set AURHELPER yay
+    set AURHELPER paru
 
     # List installed packages and allow selection with fzf
     set SELECTED_PKGS (eval $AURHELPER -Qsq | fzf --header="Remove packages" -m --preview "$AURHELPER -Si {}")
