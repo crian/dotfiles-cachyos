@@ -110,7 +110,7 @@ cl() {
 
 # Search and install packages with aur helper and fzf
 ahi() {
-    AURHELPER="yay"
+    AURHELPER="paru"
     SELECTED_PKGS="$($AURHELPER -Slq | fzf --header='Install packages' -m --preview "$AURHELPER -Si {1}")"
     if [ -n "$SELECTED_PKGS" ]; then
         echo "Installing selected packages:"
@@ -123,7 +123,7 @@ ahi() {
 
 # Search and remove packages with aur helper and fzf
 ahr() {
-    AURHELPER="yay"
+    AURHELPER="paru"
     SELECTED_PKGS="$($AURHELPER -Qsq | fzf --header='Remove packages' -m --preview "$AURHELPER -Si {1}")"
     if [ -n "$SELECTED_PKGS" ]; then
         echo "Removing selected packages:"
