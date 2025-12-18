@@ -1,4 +1,17 @@
 {
+    // --- Comments ---
     "Alt-/": "lua:comment.comment",
-    "CtrlUnderscore": "lua:comment.comment"
+    "CtrlUnderscore": "lua:comment.comment",
+
+    // --- Navigation & Editing ---
+    "Alt-Up": "MoveLinesUp",        // Move line up
+    "Alt-Down": "MoveLinesDown",    // Move line down
+    "Ctrl-d": "DuplicateLine",      // Duplicate current line
+    "Ctrl-l": "SelectLine",         // Select entire line
+
+    // --- Editor Control ---
+    "Ctrl-q": "Quit",               // Standard quit
+    "Ctrl-s": "Save",               // Standard save
+    "Ctrl-z": "Undo",               // Standard undo
+    "Ctrl-y": "Redo"                // Standard redo
 }

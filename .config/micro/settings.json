@@ -1,4 +1,21 @@
 {
+    // --- Visuals ---
+    "colorscheme": "simple",        // Uses TrueColor (matches shell config)
+    "scrollbar": true,              // Show scrollbar
+    "diffgutter": true,             // Show git changes in the gutter (+)
+    "ruler": false,                 // Disable the 80-character column ruler
+
+    // --- Behavior ---
+    "autosu": true,                 // Automatically saves with sudo if permissions are denied
+    "mkparents": true,              // Automatically creates missing parent directories on save
+    "savehistory": true,            // Remembers undo history and cursor position after closing
+    "softwrap": true,               // Soft wrap lines instead of horizontal scrolling
+    "clipboard": "terminal",        // Use system clipboard
+    "mouse": true,                  // Enable mouse support
+    "tabsize": 4,
+    "tabstospaces": true,           // Use spaces instead of tabs
+
+    // --- Status Bar ---
     "statusformatl": "$(filename) $(modified) $(status.paste)",
-    "statusformatr": "($(line),$(col)) | ft:$(opt:filetype) | $(opt:fileformat) | $(opt:encoding)"
+    "statusformatr": "($(line),$(col)) | ft:$(opt:filetype) | $(opt:encoding)"
 }
