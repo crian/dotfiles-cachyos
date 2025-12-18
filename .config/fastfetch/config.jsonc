@@ -1,24 +1,27 @@
 {
     "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
     "logo": {
-        "source": "$HOME/.config/fastfetch/logos/magical-anime-girl-with-staff-purple-sticker.png",
+        "source": "$HOME/.config/fastfetch/logos/star-wars-chibi-mandalorian-pastel-sticker.png",
         "height": 18,
-	    "padding" : {
-	        "top": 1
-	     }
+        "padding": {
+            "top": 1,
+            "right": 2
+        }
     },
     "display": {
         "separator": " ⚬ "
     },
     "modules": [
+        // --- SOFTWARE BLOCK ---
         {
             "type": "custom",
-            "format": "┌───────────────────────────────────────────────────┐"
+            "format": "┌────────────────────────────────────────────────────┐"
         },
         {
             "type": "os",
             "key": "  󰣇 OS",
-            "keyColor": "blue"
+            "keyColor": "blue",
+            "format": "{2}"
         },
         {
             "type": "kernel",
@@ -27,81 +30,99 @@
         },
         {
             "type": "packages",
-            "key": "  󰏗 Packages",
+            "key": "  󰏗 Pkgs",
             "keyColor": "blue"
         },
         {
             "type": "de",
             "key": "   DE",
-	        "format": "{2}",
+            "format": "{2}",
             "keyColor": "magenta"
         },
         {
             "type": "terminal",
-            "key": "   Terminal",
+            "key": "   Term",
             "format": "{1}",
             "keyColor": "blue"
         },
         {
             "type": "terminalfont",
             "key": "   Font",
+            "format": "{1}",
             "keyColor": "magenta"
         },
         {
             "type": "shell",
-            "format": "{1} {4}",
+            "format": "{1}",
             "key": "   Shell",
             "keyColor": "blue"
+        },
+        {
+            "type": "uptime",
+            "key": "  󰔚 Uptime",
+            "keyColor": "magenta"
         },
         {
             "type": "custom",
             "format": "└────────────────────────────────────────────────────┘"
         },
-            "break",
+
+        "break",
+
+        // --- HARDWARE BLOCK ---
         {
             "type": "custom",
             "format": "┌────────────────────────────────────────────────────┐"
         },
         {
             "type": "board",
-            "key": "   Mainboard",
+            "key": "   Board",
             "keyColor": "magenta"
         },
         {
             "type": "cpu",
-            "format": "{1}",
             "key": "   CPU",
-            "keyColor": "blue"
+            "keyColor": "blue",
+            "format": "{1}"
         },
         {
             "type": "gpu",
             "key": "   GPU",
-            "keyColor": "magenta"
+            "keyColor": "magenta",
+            "format": "{2}",
+            "hideType": "integrated"
         },
         {
             "type": "display",
-            "key": "  󰍹 Display",
-            "keyColor": "blue"
+            "key": "  󰍹 LCD",
+            "keyColor": "blue",
+            "compactType": "original"
         },
         {
             "type": "memory",
-            "key": "  󰘚 Memory",
+            "key": "  󰘚 RAM",
             "keyColor": "magenta"
-        },      
+        },
         {
             "type": "disk",
-            "key": "  🖴 Disk (/)",
+            "key": "  🖴 Disk",
             "keyColor": "blue",
+            "folders": "/"
         },
         {
             "type": "custom",
             "format": "└────────────────────────────────────────────────────┘"
         },
+
+        // --- COLORS / EXTRAS ---
+        "break",
         {
             "type": "colors",
             "paddingLeft": 2,
-            "symbol": "circle"
-        },
-            "break"
+            "symbol": "circle",
+            "block": {
+                "range": [1, 6]
+            }
+        }
     ]
 }
