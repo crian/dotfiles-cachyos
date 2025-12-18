@@ -1,8 +1,5 @@
 # ~/.config/starship.toml
 
-# Sets user-defined palette
-#palette = "catppuccin_macchiato"
-
 # Inserts a blank line between shell prompts
 add_newline = true
 
@@ -75,13 +72,27 @@ read_only = "  "
 format = "at [$path]($style)[$read_only]($read_only_style) "
 
 [directory.substitutions]
-"Documents" = "󰈙 "
-"Downloads" = " "
-"Music" = "󰝚 "
-"Pictures" = " "
+"Applications" = "  "
+"Desktop" = "  "
+"Developer" = "  "
+"Documents" = " 󰈙 "
+"Downloads" = "  "
+"Games" = "  "
+"GitHub" = "  "
+"Library" = "  "
+"Movies" = "  "
+"Music" = "  "
+"Pictures" = "  "
+"Projects" = "  "
+"Public" = "  "
+"Screenshots" = " 󱣴 "
+"Videos" = "  "
+"Thunderbird" = "   "
+"source" = " 󰈹 "
+"comm" = "  "
 
 [cmd_duration]
-min_time = 1
+min_time = 500
 format = "took [󰔚 $duration](blue)"
 disabled = false
 
